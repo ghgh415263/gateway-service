@@ -18,3 +18,5 @@ spring:
           uri: lb://MALCLEAN
           predicates:
             - Path=/admin/**
+          filters:
+            - RewritePath=/red/?(?<segment>.*), /$\{segment}
